@@ -1,27 +1,28 @@
 class Negociacao {
+    #data;
+    #quantidade;
+    #valor;
+    #volume;
 
     constructor(data, quantidade, valor) {
-        this._data = data;
-        this._quantidade = quantidade;
-        this._valor = valor;
-    }
-    calculaVolume() {
-        return  this._quantidade * this._valor;
+        this.#data = data;
+        this.#quantidade = quantidade;
+        this.#valor = valor;
     }
 
-    static getVolume(){
-        return this._volume;
+    get volume(){
+        return this.#volume =  this.#quantidade * this.#valor;;
     }
 
-    static getQuantidade(){
-        return this._quantidade;
+    get quantidade(){
+        return this.#quantidade;
     }
 
-    static getValor(){
-        return this._valor;
+    get valor(){
+        return this.#valor;
     }
 
-    static getValor(){
-        return this._valor;
+    get data(){
+        return this.#data;
     }
 }
