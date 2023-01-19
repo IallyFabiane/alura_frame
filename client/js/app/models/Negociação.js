@@ -8,6 +8,7 @@ class Negociacao {
         this.#data = data;
         this.#quantidade = quantidade;
         this.#valor = valor;
+        Object.freeze(this); //objeto imutável (shallow freeze)
     }
 
     get volume(){
