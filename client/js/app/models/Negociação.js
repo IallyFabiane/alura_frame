@@ -5,7 +5,7 @@ class Negociacao {
     #volume;
 
     constructor(data, quantidade, valor) {
-        this.#data = data;
+        this.#data = new Date(data.getTime()); //data inalterável (deep freeze)
         this.#quantidade = quantidade;
         this.#valor = valor;
         Object.freeze(this); //objeto imutável (shallow freeze)
@@ -24,6 +24,6 @@ class Negociacao {
     }
 
     get data(){
-        return this.#data;
+        return new Date(this.#data.getTime()); //data inalterável (deep freeze)
     }
 }
